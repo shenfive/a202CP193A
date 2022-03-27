@@ -54,7 +54,11 @@ struct CardView:View{
     var content:String
     
     var body: some View{
-        Text(content)
+        ZStack{
+            RoundedRectangle(cornerRadius: 20).fill().foregroundColor(.blue)
+            Text(content)
+        }
+        
     }
 }
 
