@@ -8,10 +8,45 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var emojiCount = 10
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack{
+            Text("\(emojiCount)")
+                .padding()
+            HStack{
+                remove
+                Spacer()
+                add
+            }
+            .font(.largeTitle)
+            .padding(.horizontal,20)
+        }
     }
+    
+    
+    
+    var remove: some View {
+        Button {
+            if emojiCount > 1 {
+                emojiCount -= 1
+            }
+        } label: {
+            Image(systemName: "minus.circle")
+        }
+    }
+    
+    var add: some View {
+        Button {
+            if emojiCount < 20 {
+                emojiCount += 1
+            }
+        } label: {
+            Image(systemName: "plus.circle")
+        }
+    }
+
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
