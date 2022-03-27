@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         VStack{
             
-            CardView(content: "👍")
+            CardView(content: "👍").frame(width: 90, height: 120, alignment: .center)
             
             HStack{
                 remove
