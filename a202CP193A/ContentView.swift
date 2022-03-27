@@ -11,8 +11,9 @@ struct ContentView: View {
     @State var emojiCount = 10
     var body: some View {
         VStack{
-            Text("\(emojiCount)")
-                .padding()
+            
+            CardView(content: "👍")
+            
             HStack{
                 remove
                 Spacer()
@@ -48,6 +49,15 @@ struct ContentView: View {
     
     
 }
+
+struct CardView:View{
+    var content:String
+    
+    var body: some View{
+        Text(content)
+    }
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
