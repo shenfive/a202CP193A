@@ -11,9 +11,14 @@ struct ContentView: View {
     @State var emojiCount = 10
     var body: some View {
         VStack{
+            ScrollView{
+                CardView(content: "👍").frame(width: 90, height: 120, alignment: .center)
+                CardView(content: "👍").frame(width: 90, height: 120, alignment: .center)
+
+                
+            }
             
-            CardView(content: "👍").frame(width: 90, height: 120, alignment: .center)
-            
+            Spacer()
             HStack{
                 remove
                 Spacer()
